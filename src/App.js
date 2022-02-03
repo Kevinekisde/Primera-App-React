@@ -1,25 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import Cupcake from "./Cupcake";
+import "./style.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App = ()=> (
+    <div className="container">
+      <Cupcake id="cup1" color = "Rosa" sabor="Vainilla" foto="http://2.bp.blogspot.com/-S_cI62h1oFs/UUBPVdTAFwI/AAAAAAAAJkA/KIP9FgfF3Lo/s1600/cupcake-suave-de-chocolate-y-merengue-suizo.JPG"/>
+      <Cupcake id="cup2" color = "Azul" sabor="Chocolate" foto="https://media.istockphoto.com/photos/blue-cupcake-with-stars-glitter-sprinkles-picture-id873286984"/>
+      <Cupcake id="cup3" color = "Verde" sabor="Menta" foto = "https://i.pinimg.com/736x/40/5d/5b/405d5bdb9fc37d3b166372526ac77568.jpg"/>
     </div>
-  );
-}
+);
 
 export default App;
