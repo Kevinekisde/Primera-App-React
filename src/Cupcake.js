@@ -1,24 +1,33 @@
-import {useState, useEffect} from "react";
+import {useState, useEffect, useRef} from "react";
+import "./Cupcake.css"
 
 const Cupcake = ({color ,sabor ,foto}) => {
+    const fotoCupcake = useRef()
 
     const [vendido, setVendido] = useState(false)
     const vender = () => {
         setVendido(true)
         setReservado(true)
+        const elemento=fotoCupcake.current;
+        elemento.classList.add("vendido");
+
     }
 
     const [reservado, setReservado] = useState(false)
-    const reservar = () => setReservado(true)
+    const reservar = () =>{ setReservado(true)
+        const elemento=fotoCupcake.current;
+        elemento.classList.add("vendido");
+    }
 
     useEffect(()=>{
-        console.log("Bienevenido", Date.now())
-    },[vendido])
+        } ,[reservado])
+
+
 
 
     return (
         <div>
-            <img src={foto} alt={color}/>
+            <img ref={fotoCupcake} src={foto} alt={color}/>
             <p>{`Sabor : ${sabor}`}</p>
             <p>
                 <b> Reservado: </b>
